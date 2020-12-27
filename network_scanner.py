@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 
 import scapy.all as scapy
+from optparse import OptionParser
+
+
+def get_arguments():
+	parser = OptionParser()
+	parser.add_option("-t",  "--target", dest="target", help="Target IP / IP range")
+	parser.add_option("-q", "--quiet", action="store_false", dest="verbose",
+	default=True, help="don't print status message to stdout" )
+	(options, args) = parser.parse_args()
 
 
 def scan(ip):
