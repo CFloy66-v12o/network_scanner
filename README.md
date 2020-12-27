@@ -1,2 +1,3 @@
 # network_scanner
-python network scanner with scapy
+python network scanner with scapy. ability to discover clients on a network (sans-verbose output)
+
