@@ -10,6 +10,7 @@ def get_arguments():
 	parser.add_option("-q", "--quiet", action="store_false", dest="verbose",
 	default=True, help="don't print status message to stdout" )
 	(options, args) = parser.parse_args()
+	return options
 
 
 def scan(ip):
@@ -31,5 +32,6 @@ def print_result(results_list):
 		print(client["ip"] + "\t\t" + client["mac"])
 
 
+options = get_arguments()
 scan_result = scan("10.0.2.1/24")
 print_result(scan_result)
